@@ -12,6 +12,13 @@ ul, ul li, ul li a {
 }
 
 /* fonts */
+header h2 {
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFDF6;
+}
+
 main h2 {
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
@@ -28,36 +35,73 @@ main ul li a {
     color: #134686;
 }
 
+footer p {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #373737;
+}
+
 /* set ups */
 body {
     background-color: rgb(255, 254, 242);
+    width: 1100px;
+    margin: auto;
 }
 
 header {
     background-color: #ED3F47;
-    width: 1100px;
+    /* width: 1100px; */
     height: 250px;
+    /* margin: auto; */
 }
 
 main {
     background-color: #134686;
-    width: 1100px;
+    /* width: 1100px; */
+    /* margin: auto; */
 }
 
 footer {
     background-color: #FEB21A;
-    width: 1100px;
+    /* width: 1100px; */
+    /* margin: auto; */
 } 
 
 /* header */
-header h2 {
-    font-family: "Schoolbell", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: #FFFDF6;
-}
 
 /* main */
-ul li {
+main ul li {
+    text-align: center;
+
     background-color: #FFF8E0;
+    padding: 10px 30px;
+    margin: 30px 20px;
+
+    border: solid 2px #FFC550;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0px #FFC550;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    padding: 20px;
+}
+
+.projects section {
+    flex: 1;
+}
+
+/* footer */
+footer {
+    padding: 15px;
+}
+
+footer p {
+    text-align: center;
 }
