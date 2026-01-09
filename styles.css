@@ -72,29 +72,79 @@ footer {
 /* header */
 
 /* main */
-main ul li {
+.projects .verone {
+    text-align: center;
+
+    animation: text-change 10s, text-wiggle-one 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.projects .vertwo {
+    text-align: center;
+
+    animation: text-change 10s, text-wiggle-two 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.projects {
+    display: flex;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.projects section {
+    flex: 1;
+}
+
+.projects .button{
     text-align: center;
 
     background-color: #FFF8E0;
     padding: 10px 30px;
     margin: 30px 20px;
 
-    border: solid 2px #FFC550;
-    border-radius: 5px;
+    border: solid 2px #ffaa00;
+    border-radius: 10px;
+
+    position: relative;
+    bottom: 5px;
+    box-shadow: 0px 10px 0px #FFC550;
+}
+
+.projects .button:active {
+    position: relative;
+    bottom: 0px;
+
+    background-color: #ffecaf;
     box-shadow: 0px 5px 0px #FFC550;
 }
 
-main h2 {
-    text-align: center;
+/* text color change animation */
+@keyframes text-change {
+    0%{color:#FFFDF6;}
+    25%{color:#D5FF6B}
+    50%{color:#FEB21A;}
+    75%{color:#ED3F47;}
+    100%{color:#FFFDF6;}
 }
 
-.projects {
-    display: flex;
-    padding: 20px;
+/* text wiggle animation */
+@keyframes text-wiggle-one {
+    0%{transform: rotate(-5deg);}
+    25%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    75%{transform: rotate(5deg);}
+    100%{transform: rotate(-5deg);}
 }
 
-.projects section {
-    flex: 1;
+@keyframes text-wiggle-two {
+    0%{transform: rotate(5deg);}
+    25%{transform: rotate(-5deg);}
+    50%{transform: rotate(5deg);}
+    75%{transform: rotate(-5deg);}
+    100%{transform: rotate(5deg);}
 }
 
 /* footer */
