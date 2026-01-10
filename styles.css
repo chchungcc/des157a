@@ -4,7 +4,7 @@ h1, h2, h3, p {
     padding: 0;
 }
 
-ul, ul li, ul li a {
+ul, ul li, ul li a, footer p a {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -40,10 +40,10 @@ main ul li a {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: #134686;
+    color: #895c44;
 }
 
-footer p {
+footer p, footer p a {
     font-family: "Comfortaa", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -68,14 +68,19 @@ header {
     /* background-position: center; */
     height: 250px;
     border-bottom: dashed 2px #FFFDF6;
-    border-bottom-right-radius: 90px;
-    box-shadow: 0px 5px 2px rgb(55, 55, 55, 0.5);   
+    border-bottom-right-radius: 120px;
+    box-shadow: 0px 5px 5px rgba(28, 28, 28, 0.5);   
 }
 
 footer {
     background-color: #FEB21A;
     background-image: url(images/footerbackground.png);
     background-position: center;
+
+    padding: 15px;
+    border-top: dashed 2px #FFFDF6;
+    border-top-left-radius: 120px;
+    box-shadow: 0px -5px 5px rgba(28, 28, 28, 0.5); 
 } 
 
 /* header */
@@ -85,11 +90,40 @@ footer {
     bottom: 60%;
 }
 
+.redapple img:hover {
+    animation-name: apple-spin;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
 .greenapple {
     position: relative;
     left: 75%;
     bottom: 135%;
 }
+
+.greenapple img:hover {
+    animation-name: apple-spin;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+/* apple spin animation */
+@keyframes apple-spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* red apple hop animation 
+@keyframes apple-hop {
+    0%{transform: translateY(0px);}
+    25%{transform: translateY(10px);}
+    50%{transform: translateY(0px);}
+    75%{transform: translateY(15px);}
+    100%{transform: translateY(0px);}
+} */
 
 .scissors i {
     position: relative;
@@ -106,7 +140,7 @@ footer {
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out; */
-    transform: translate(980px);
+    transform: translate(900px);
 }
 
 /* scissors animation */
@@ -216,14 +250,15 @@ header .quarter {
     100%{transform: rotate(5deg);}
 }
 
-/* footer */
-footer {
-    padding: 15px;
-    border-top: dashed 2px #FFFDF6;
-    border-top-left-radius: 90px;
-    box-shadow: 0px -5px 2px rgb(55, 55, 55, 0.5);    
+.projects a:hover {
+    color: #d19678;
 }
 
+/* footer */
 footer p {
     text-align: center;
+}
+
+footer p a:hover {
+    color:#FFFDF6;
 }
