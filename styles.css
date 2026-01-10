@@ -65,7 +65,7 @@ body {
 header {
     background-color: #ED3F47;
     background-image: url(images/headerbackground.png);
-    background-position: center;
+    /* background-position: center; */
     height: 250px;
     border-bottom: dashed 2px #FFFDF6;
     border-bottom-right-radius: 90px;
@@ -80,23 +80,25 @@ footer {
 
 /* header */
 .redapple {
-    position: absolute;
+    position: relative;
+    left: 8%;
+    bottom: 60%;
 }
 
 .greenapple {
-    position: absolute;
-    left: 800px;
-    bottom: 500px;
+    position: relative;
+    left: 75%;
+    bottom: 135%;
 }
 
 .scissors i {
-    position: absolute;
-    left: 800px;
-    top: 236px;
+    position: relative;
+    left: 3%;
+    bottom: 315px;
     font-size: 30px;
     color: #FFF8E0;
     transform: translate(0px);
-    transition: transform 3s ease;
+    transition: transform 7s ease-in-out;
 }
 
 .scissors i:hover {
@@ -104,7 +106,7 @@ footer {
     animation-duration: 5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out; */
-    transform: translate(200px);
+    transform: translate(980px);
 }
 
 /* scissors animation */
