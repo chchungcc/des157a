@@ -55,11 +55,14 @@ footer p, footer p a {
 body {
     background-color: rgb(255, 254, 242);
     width: 1100px;
+    height: 750px;
     margin: auto;
 }
 
 .background-color {
     background-color: #134686;
+    background-image: url(images/mainbackground.png);
+    height: 750px;
 }
 
 header {
@@ -72,7 +75,7 @@ header {
     box-shadow: 0px 5px 5px rgba(28, 28, 28, 0.5);   
 }
 
-footer {
+.footer {
     background-color: #FEB21A;
     background-image: url(images/footerbackground.png);
     background-position: center;
@@ -255,6 +258,57 @@ header .quarter {
 }
 
 /* footer */
+.footer {
+    position: relative;
+    z-index: 2;
+}
+
+.orange {
+    position: relative;
+    bottom: 200px;
+    left: 5%;
+    z-index: 1;
+    animation: fruit-float 3s forwards infinite ease-in-out;
+}
+
+.lemon-slice {
+    position: relative;
+    bottom: 355px;
+    left: 32%;
+    z-index: 1;
+
+}
+
+.lemon-slice img {
+    width: 140px;
+    height: auto;
+
+    animation: lemon-rotate 3s forwards infinite ease;
+}
+
+.orange-slice {
+    position: relative;
+    bottom: 570px;
+    left: 78%;
+    z-index: 1;
+    animation: fruit-float 3s forwards infinite ease-in-out;
+}
+
+
+/* orange floating animation */
+@keyframes fruit-float {
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-20px);}
+    100%{transform: translateY(0);}
+}
+
+/* lemon animation */
+@keyframes lemon-rotate {
+    0%{transform: rotate(20deg);}
+    50%{transform: rotate(-5deg);}
+    100%{transform: rotate(20deg);}
+}
+
 footer p {
     text-align: center;
 }
