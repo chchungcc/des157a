@@ -14,7 +14,7 @@ ul, ul li, ul li a, footer p a {
 /* fonts */
 header h1 {
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 700;
     font-style: normal;
     color: #FFFDF6;
@@ -29,7 +29,7 @@ header h2 {
 
 main h2 {
     font-family: "Fredoka", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 600;
     font-style: normal;
     color: #FFFDF6;
@@ -37,7 +37,7 @@ main h2 {
 
 main ul li a {
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 400;
     font-style: normal;
     color: #895c44;
@@ -45,7 +45,7 @@ main ul li a {
 
 footer p, footer p a {
     font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 700;
     font-style: normal;
     color: #373737;
@@ -119,15 +119,6 @@ header {
     100%{transform: rotate(360deg);}
 }
 
-/* red apple hop animation 
-@keyframes apple-hop {
-    0%{transform: translateY(0px);}
-    25%{transform: translateY(10px);}
-    50%{transform: translateY(0px);}
-    75%{transform: translateY(15px);}
-    100%{transform: translateY(0px);}
-} */
-
 .scissors i {
     position: relative;
     left: 3%;
@@ -139,10 +130,6 @@ header {
 }
 
 .scissors i:hover {
-    /* animation-name: cutting;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out; */
     transform: translate(900px);
 }
 
