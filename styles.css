@@ -18,8 +18,8 @@ header h1 {
     font-weight: 700;
     font-style: normal;
     color: #FFFDF6;
-    font-size: 20px;
 }
+
 header h2 {
     font-family: "Schoolbell", cursive;
     font-weight: 400;
@@ -51,27 +51,23 @@ footer p, footer p a {
     color: #373737;
 }
 
-/* set ups */
-body {
-    background-color: rgb(255, 254, 242);
-    width: 1100px;
-    height: 750px;
-    margin: auto;
+header h1 {
+    font-size: 20px;
 }
 
+/* set ups */
 .background-color {
     background-color: #134686;
     background-image: url(images/mainbackground.png);
-    height: 750px;
 }
 
 header {
     background-color: #ED3F47;
     background-image: url(images/headerbackground.png);
-    /* background-position: center; */
-    height: 250px;
+    background-position: center;
+    height: 200px;
     border-bottom: dashed 2px #FFFDF6;
-    border-bottom-right-radius: 120px;
+    border-bottom-right-radius: 100px;
     box-shadow: 0px 5px 5px rgba(28, 28, 28, 0.5);   
 }
 
@@ -80,83 +76,102 @@ header {
     background-image: url(images/footerbackground.png);
     background-position: center;
 
-    padding: 15px;
+    padding: 30px;
     border-top: dashed 2px #FFFDF6;
-    border-top-left-radius: 120px;
+    border-top-left-radius: 100px;
     box-shadow: 0px -5px 5px rgba(28, 28, 28, 0.5); 
-} 
+
+    text-align: center;
+}
 
 /* header */
-.redapple {
-    position: relative;
-    left: 8%;
-    bottom: 60%;
-}
-
-.redapple img:hover {
-    animation-name: apple-spin;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-
-.greenapple {
-    position: relative;
-    left: 75%;
-    bottom: 135%;
-}
-
-.greenapple img:hover {
-    animation-name: apple-spin;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-
-/* apple spin animation */
-@keyframes apple-spin {
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-}
-
-.scissors i {
-    position: relative;
-    left: 3%;
-    bottom: 315px;
-    font-size: 30px;
-    color: #FFF8E0;
-    transform: translate(0px);
-    transition: transform 7s ease-in-out;
-}
-
-.scissors i:hover {
-    transform: translate(900px);
-}
-
-/* scissors animation */
-@keyframes cutting {
-    0% {transform: translate(0px)}
-    50% {transform: translate(200px)}
-    100% {transform: translate(0px)}
-}
-
 header h1 {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 45px;
 }
 
 header h2 {
     text-align: center;
-    font-size: 36px;
-    padding-top: 40px;
+    font-size: 24px;
+    padding-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    font-size: 1.7em;
 }
 
 header .quarter {
-    font-size: 24px;
+    font-size: 18px;
     padding-top: 5px;
+    font-size: 1.3em;
+}
+
+.redapple {
+    position: relative;
+    left: -5%;
+    bottom: 15%;
+}
+
+.redapple img {
+    width: 35%;
+}
+
+.greenapple {
+    position: relative;
+    left: 73%;
+    bottom: -50%;
+}
+
+.greenapple img {
+    width: 35%;
+}
+
+.scissors i {
+    display: none;
 }
 
 /* main */
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    margin-top: 30px;
+}
+
+.projects section {  
+    border-top: dashed 2px #3f689a;
+}
+
+.projects section:first-of-type {  
+    border-top: none;
+}
+
+.projects section:last-of-type {  
+    margin-bottom: 120px;
+}
+
+.projects section ul {
+    background-color: #FFF8E0;
+    border: solid 3px #a6e700;
+    border-radius: 30px;
+    margin: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 10px 0px #D5FF6B;
+}
+
+.projects section ul li {
+    padding: 10px;
+}
+
+.projects section ul li:first-of-type {
+    padding-top: 20px;
+}
+
+.projects section ul li:last-of-type {
+    padding-bottom: 20px;
+}
+
 .projects .verone {
     text-align: center;
 
@@ -171,47 +186,6 @@ header .quarter {
     animation: text-change 5s, text-wiggle-two 5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-}
-
-.projects {
-    display: flex;
-    padding: 20px;
-    padding-bottom: 0px;
-}
-
-.projects section {
-    flex: 1;
-    margin-bottom: 10px;   
-    border-right: dashed 2px #3f689a;
-}
-
-.projects section:last-of-type { 
-    border-right: none
-}
-
-.projects .button{
-    text-align: center;
-
-    background-color: #FFF8E0;
-    padding: 10px 30px;
-    margin: 30px 20px;
-
-    border: solid 2px #a6e700;
-    border-radius: 10px;
-
-    position: relative;
-    bottom: 5px;
-    box-shadow: 0px 10px 0px #D5FF6B;
-
-    z-index: 3;
-}
-
-.projects .button:active {
-    position: relative;
-    bottom: 0px;
-
-    background-color: #ffecaf;
-    box-shadow: 0px 5px 0px #D5FF6B;
 }
 
 /* text color change animation */
@@ -247,61 +221,323 @@ header .quarter {
 }
 
 /* footer */
-.footer {
-    position: relative;
-    z-index: 2;
+.footer p {
+    line-height: 2em;
+}
+
+.footer span {
+    display: none;
+}
+
+.footer br {
+    display: inline;
 }
 
 .orange {
-    position: relative;
-    bottom: 200px;
-    left: 5%;
-    z-index: 1;
-    animation: fruit-float 3s forwards infinite ease-in-out;
+    position: absolute;
+    bottom: -155px;
+    left: -5%;
+}
+
+.orange img {
+    width: 70%;
 }
 
 .lemon-slice {
-    position: relative;
-    bottom: 355px;
-    left: 32%;
-    z-index: 1;
-
+    position: absolute;
+    bottom: -500px;
+    left: 70%;
 }
 
 .lemon-slice img {
-    width: 140px;
-    height: auto;
-
-    animation: lemon-rotate 3s forwards infinite ease;
+    width: 120%;
 }
 
 .orange-slice {
-    position: relative;
-    bottom: 570px;
-    left: 78%;
-    z-index: 1;
-    animation: fruit-float 3s forwards infinite ease-in-out;
+    position: absolute;
+    bottom: -800px;
+    left: -5%;
 }
 
-
-/* orange floating animation */
-@keyframes fruit-float {
-    0%{transform: translateY(0);}
-    50%{transform: translateY(-20px);}
-    100%{transform: translateY(0);}
+.orange-slice img {
+    width: 70%;
 }
 
-/* lemon animation */
-@keyframes lemon-rotate {
-    0%{transform: rotate(20deg);}
-    50%{transform: rotate(-5deg);}
-    100%{transform: rotate(20deg);}
-}
+@media (min-width:1100px) {
+    /* fonts */
+    header h1 {
+        font-size: 20px;
+    }
 
-footer p {
-    text-align: center;
-}
+    header h2 {
+        font-size: 1.5em;
+    }
 
-footer p a:hover {
-    color:#FFFDF6;
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main .buttons a {
+        font-size: 1.5em;
+    }
+
+    /* set ups */
+    body {
+        background-color: rgb(255, 254, 242);
+        width: 1100px;
+        height: 750px;
+        margin: auto;
+    }
+
+    .background-color {
+        height: 750px;
+    }
+
+    header {
+        height: 250px;
+        border-bottom-right-radius: 120px;
+        background-position: initial;
+    }
+
+    .footer {
+        border-top-left-radius: 120px;
+        padding: 15px;
+    } 
+
+    /* header */
+    .redapple {
+        position: relative;
+        left: 8%;
+        bottom: 60%;
+    }
+
+    .redapple img {
+        width: initial;
+        height: initial;
+    }
+
+    .redapple img:hover {
+        animation-name: apple-spin;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+
+        width: initial;
+        height: initial;
+    }
+
+    .greenapple {
+        position: relative;
+        left: 75%;
+        bottom: 135%;
+
+        width: initial;
+        height: initial;
+    }
+
+    .greenapple img {
+        width: initial;
+        height: initial;
+    }
+
+    .greenapple img:hover {
+        animation-name: apple-spin;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+
+        width: initial;
+        height: initial;
+    }
+
+    /* apple spin animation */
+    @keyframes apple-spin {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(360deg);}
+    }
+
+    .scissors i {
+        display: inline;
+        position: relative;
+        left: 3%;
+        bottom: 315px;
+        font-size: 30px;
+        color: #FFF8E0;
+        transform: translate(0px);
+        transition: transform 7s ease-in-out;
+    }
+
+    .scissors i:hover {
+        transform: translate(900px);
+    }
+
+    /* scissors animation */
+    @keyframes cutting {
+        0% {transform: translate(0px)}
+        50% {transform: translate(200px)}
+        100% {transform: translate(0px)}
+    }
+
+    header h1 {
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    header h2 {
+        text-align: center;
+        font-size: 36px;
+        padding-top: 40px;
+    }
+
+    header .quarter {
+        font-size: 24px;
+        padding-top: 5px;
+    }
+
+    /* main */
+    .projects section ul {
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        margin: 0px;
+        box-shadow: none;
+    }
+
+    .projects section ul li {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .projects section ul li:first-of-type {
+        padding-top: 0px;
+    }
+
+    .projects section ul li:last-of-type {
+        padding-bottom: 0px;
+    }
+
+    .projects h2 {
+        margin: 0px;
+    }
+
+    .projects {
+        display: flex;
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+
+    .projects section {
+        flex: 1;
+        margin-bottom: 10px;   
+        border-right: dashed 2px #3f689a;
+
+        border-top: none;
+    }
+
+    .projects section:last-of-type { 
+        border-right: none
+    }
+
+    .projects .button {
+        text-align: center;
+
+        background-color: #FFF8E0;
+        padding: 10px 30px;
+        margin: 30px 20px;
+
+        border: solid 2px #a6e700;
+        border-radius: 10px;
+
+        position: relative;
+        bottom: 5px;
+        box-shadow: 0px 10px 0px #D5FF6B;
+
+        z-index: 3;
+    }
+
+    .projects .button:active {
+        position: relative;
+        bottom: 0px;
+
+        background-color: #ffecaf;
+        box-shadow: 0px 5px 0px #D5FF6B;
+    }
+
+    /* footer */
+    .footer {
+        position: relative;
+        z-index: 2;
+    }
+
+    .footer p {
+        line-height: 1.15em;
+    }
+
+    .footer span {
+        display: inline;
+    }
+
+    .footer br {
+        display: none;
+    }
+
+    .orange {
+        position: relative;
+        bottom: 200px;
+        left: 5%;
+        z-index: 1;
+        animation: fruit-float 3s forwards infinite ease-in-out;
+    }
+
+    .orange img {
+        width: initial;
+        height: initial;
+    }
+
+    .lemon-slice {
+        position: relative;
+        bottom: 355px;
+        left: 32%;
+        z-index: 1;
+
+    }
+
+    .lemon-slice img {
+        width: 140px;
+        height: auto;
+
+        animation: lemon-rotate 3s forwards infinite ease;
+    }
+
+    .orange-slice {
+        position: relative;
+        bottom: 570px;
+        left: 78%;
+        z-index: 1;
+        animation: fruit-float 3s forwards infinite ease-in-out;
+    }
+
+    .orange-slice img {
+        width: initial;
+        height: initial;
+    }
+
+
+    /* orange floating animation */
+    @keyframes fruit-float {
+        0%{transform: translateY(0);}
+        50%{transform: translateY(-20px);}
+        100%{transform: translateY(0);}
+    }
+
+    /* lemon animation */
+    @keyframes lemon-rotate {
+        0%{transform: rotate(20deg);}
+        50%{transform: rotate(-5deg);}
+        100%{transform: rotate(20deg);}
+    }
+
+    footer p a:hover {
+        color:#FFFDF6;
+    }
 }
