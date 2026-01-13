@@ -337,9 +337,10 @@ header .quarter {
 
     .redapple img:hover {
         animation-name: apple-spin;
-        animation-duration: 3s;
+        animation-duration: 0.3s;
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
+        animation-timing-function: linear;
 
         width: initial;
         height: initial;
@@ -362,9 +363,10 @@ header .quarter {
 
     .greenapple img:hover {
         animation-name: apple-spin;
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
+        animation-timing-function: linear;
 
         width: initial;
         height: initial;
