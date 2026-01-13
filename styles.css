@@ -114,6 +114,7 @@ header .quarter {
 
 .redapple img {
     width: 35%;
+    animation: fruit-rotate-1 3s forwards infinite ease;
 }
 
 .greenapple {
@@ -124,6 +125,7 @@ header .quarter {
 
 .greenapple img {
     width: 35%;
+    animation: fruit-rotate-2 3s forwards infinite ease;
 }
 
 .scissors i {
@@ -241,6 +243,7 @@ header .quarter {
 
 .orange img {
     width: 70%;
+    animation: fruit-rotate-1 3s forwards infinite ease;
 }
 
 .lemon-slice {
@@ -251,6 +254,7 @@ header .quarter {
 
 .lemon-slice img {
     width: 120%;
+    animation: fruit-rotate-2 3s forwards infinite ease;
 }
 
 .orange-slice {
@@ -261,6 +265,20 @@ header .quarter {
 
 .orange-slice img {
     width: 70%;
+    animation: fruit-rotate-1 3s forwards infinite ease;
+}
+
+/* fruit rotate */
+@keyframes fruit-rotate-1 {
+        0%{transform: rotate(20deg);}
+        50%{transform: rotate(-5deg);}
+        100%{transform: rotate(20deg);}
+}
+
+@keyframes fruit-rotate-2 {
+        0%{transform: rotate(-20deg);}
+        50%{transform: rotate(5deg);}
+        100%{transform: rotate(-20deg);}
 }
 
 @media (min-width:1100px) {
