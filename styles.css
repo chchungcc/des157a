@@ -127,7 +127,7 @@ header .quarter {
 }
 
 .scissors i {
-    display: none;
+    color: transparent;
 }
 
 /* main */
@@ -357,8 +357,9 @@ header .quarter {
     }
 
     .scissors i {
-        display: inline;
+        /* display: inline; */
         position: relative;
+        z-index: 3;
         left: 3%;
         bottom: 315px;
         font-size: 30px;
@@ -372,19 +373,17 @@ header .quarter {
     }
 
     /* scissors animation */
-    @keyframes cutting {
+    /* @keyframes cutting {
         0% {transform: translate(0px)}
         50% {transform: translate(200px)}
         100% {transform: translate(0px)}
-    }
+    } */
 
     header h1 {
-        text-align: center;
         padding-top: 40px;
     }
 
     header h2 {
-        text-align: center;
         font-size: 36px;
         padding-top: 40px;
     }
@@ -405,7 +404,6 @@ header .quarter {
 
     .projects section ul li {
         padding: 0px;
-        text-align: center;
     }
 
     .projects section ul li:first-of-type {
@@ -439,8 +437,6 @@ header .quarter {
     }
 
     .projects .button {
-        text-align: center;
-
         background-color: #FFF8E0;
         padding: 10px 30px;
         margin: 30px 20px;
