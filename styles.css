@@ -508,6 +508,7 @@ header .quarter {
     .orange img {
         width: initial;
         height: initial;
+        animation: none;
     }
 
     .lemon-slice {
@@ -536,6 +537,7 @@ header .quarter {
     .orange-slice img {
         width: initial;
         height: initial;
+        animation: none;
     }
 
 
