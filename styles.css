@@ -332,6 +332,7 @@ header .quarter {
     .redapple img {
         width: initial;
         height: initial;
+        animation: none;
     }
 
     .redapple img:hover {
@@ -356,6 +357,7 @@ header .quarter {
     .greenapple img {
         width: initial;
         height: initial;
+        animation: none;
     }
 
     .greenapple img:hover {
