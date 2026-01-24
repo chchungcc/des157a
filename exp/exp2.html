@@ -6,7 +6,89 @@
     <title>Experiment 2</title>
 </head>
 <body>
-    <h1>Experiment 1</h1>
-    <h2>Open the console to see the functionality of the code!</h2>
+
+    <style>
+        .boxes {display: flex; gap: 10px;}
+    </style>
+
+    <h1>Experiment 2</h1>
+
+    <div class="boxes">
+
+    </div>
+
+    <p class="intro-text">Pick a color: Yellow, Red, Purple, Mint</p>
+
+    <script>
+        //This program asks users to choose a color from a list of colors. After users choose a color, the program randomly generates a number from 0-5, and creates that number of boxes in the document. The boxes will be the color that the user chose. The messages that the user will receive is dependent on the number of boxes that have been created. If the user gets zero boxes, the program will run a function that goes through an array of fruits and gives the user a fruit instead. 
+
+        var color = prompt("Pick a color from this list: Yellow, Red, Purple, Mint", "");
+
+        //pick random number from 0-5
+        function randomBoxes(max) {
+            var randomNum = Math.random();
+            var randomVal = randomNum*6;
+            var roundedVal = Math.floor(randomVal);
+
+            return roundedVal;
+        }
+
+        //give the user a fruit
+        function giveFruit (){
+            var fruits = ["red apple", "green apple", "blueberry", "lemon", "pear", "strawberry"];
+            var chosen = randomBoxes();
+            return fruits[chosen];
+        }
+
+        //determine number of boxes the user gets
+        var numBox = randomBoxes();
+
+        if (color == "Yellow" || color == "Red" || color == "Purple" || color == "Mint") {
+
+            //different messages depending on how many boxes a user got
+            if(numBox == 0){
+                var given = giveFruit();
+                document.querySelector('.intro-text').innerHTML= `Sorry, you didn't get a box, but have a ${given} instead!`;
+            }
+            else if(numBox == 1){
+                document.querySelector('.intro-text').innerHTML= "Better than zero boxes, I suppose!";
+            }
+            else{
+                document.querySelector('.intro-text').innerHTML= `You get ${numBox} boxes!`;
+            }
+            
+            var getBoxes = document.querySelector('.boxes');
+
+            //make the boxes
+            for(var i = 1; i <= numBox; i++){
+                var smallBox = document.createElement('div');
+                smallBox.style.width = '50px';
+                smallBox.style.height = '50px';
+
+                //change color of box depending on prompt input
+                if(color=="Yellow"){
+                    smallBox.style.backgroundColor = '#ffcc00';
+                }
+                else if(color=="Red"){
+                    smallBox.style.backgroundColor = '#ff0033';
+                }
+                else if(color=="Purple"){
+                    smallBox.style.backgroundColor = '#c5abff';
+                }
+                else if(color=="Mint"){
+                    smallBox.style.backgroundColor = '#96ffee';
+                }
+
+                getBoxes.appendChild(smallBox);
+            }
+         }
+
+        else {
+           document.querySelector('.intro-text').innerHTML= "You didn't choose a color from the list D:";
+        }
+
+
+    </script>
+
 </body>
 </html>
