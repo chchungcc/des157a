@@ -17,17 +17,17 @@
 
     </div>
 
-    <p class="intro-text">Pick a color: Yellow, Red, Purple, Mint</p>
+    <p class="intro-text">Pick a color: Yellow, Red, Purple, Mint, Random</p>
 
     <script>
         //This program asks users to choose a color from a list of colors. After users choose a color, the program randomly generates a number from 0-5, and creates that number of boxes in the document. The boxes will be the color that the user chose. The messages that the user will receive is dependent on the number of boxes that have been created. If the user gets zero boxes, the program will run a function that goes through an array of fruits and gives the user a fruit instead. 
 
-        var color = prompt("Pick a color from this list: Yellow, Red, Purple, Mint (Please type the color as you see it written on the list! i.e., Capitalize the first letter!)", "");
+        var color = prompt("Pick a color from this list: Yellow, Red, Purple, Mint, Random", "");
 
         //pick random number from 0-5
         function randomBoxes(max) {
             var randomNum = Math.random();
-            var randomVal = randomNum*6;
+            var randomVal = randomNum*max;
             var roundedVal = Math.floor(randomVal);
 
             return roundedVal;
@@ -36,14 +36,23 @@
         //give the user a fruit
         function giveFruit (){
             var fruits = ["red apple", "green apple", "blueberry", "lemon", "pear", "strawberry"];
-            var chosen = randomBoxes();
+            var chosen = randomBoxes(6);
             return fruits[chosen];
+        }
+        
+        //generates a random color
+        function randomColor(){
+            var red = randomBoxes(256);
+            var green = randomBoxes(256);
+            var blue = randomBoxes(256);
+            var newColor = `rgb(${red},${green},${blue})`;
+            return newColor;
         }
 
         //determine number of boxes the user gets
-        var numBox = randomBoxes();
+        var numBox = randomBoxes(6);
 
-        if (color == "Yellow" || color == "Red" || color == "Purple" || color == "Mint") {
+        if (color == "Yellow" || color == "yellow" || color == "Red" || color == "red" || color == "Purple" || color == "purple" || color == "Mint" || color == "mint" || color=="Random" || color=="random") {
 
             //different messages depending on how many boxes a user got
             if(numBox == 0){
@@ -66,17 +75,20 @@
                 smallBox.style.height = '50px';
 
                 //change color of box depending on prompt input
-                if(color=="Yellow"){
+                if(color=="Yellow" || color=="yellow"){
                     smallBox.style.backgroundColor = '#ffcc00';
                 }
-                else if(color=="Red"){
+                else if(color=="Red" || color=="red"){
                     smallBox.style.backgroundColor = '#ff0033';
                 }
-                else if(color=="Purple"){
+                else if(color=="Purple" || color=="purple"){
                     smallBox.style.backgroundColor = '#c5abff';
                 }
-                else if(color=="Mint"){
+                else if(color=="Mint" || color=="mint"){
                     smallBox.style.backgroundColor = '#96ffee';
+                }
+                else if (color=="Random" || color=="random"){
+                    smallBox.style.backgroundColor = randomColor();
                 }
 
                 getBoxes.appendChild(smallBox);
