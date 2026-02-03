@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs V1</title>
+
+    <!-- normalization -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Libre+Baskerville:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- style sheet -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="script.js" defer></script> 
+
+</head>
+<body>
+
+    <header>
+        <h1>madlibs</h1>
+        <h1>by chris</h1>
+    </header>
+
+    <main>
+
+        <div id="envelope">
+            <img src="images/envelope-small.png" alt="envelope">
+        </div>
+
+        <section id="madlibs-questions">
+            <form>
+                <h2>You're invited to celebrate:</h2>
+
+                <div id="questions">
+                    <div>
+                        <label for="pluralnoun">Plural Noun:</label>
+                        <input type="text" id="pluralnoun" placeholder="ex. cats" required>
+                        <label for="color">Color:</label>
+                        <input type="text" id="color" placeholder="ex. yellow" required>
+                        <label for="clothing">Article of Clothing:</label>
+                        <input type="text" id="clothing" placeholder="ex. hat" required>
+                        <label for="food">Food:</label>
+                        <input type="text" id="food" placeholder="ex. cake" required>
+                        <label for="adjective1">Adjective:</label>
+                        <input type="text" id="adjective1" placeholder="ex. majestic" required>
+                    </div>
+                    <div>
+                        <label for="funnoun1">Fun Noun:</label>
+                        <input type="text" id="funnoun1" placeholder="ex. glitter" required>
+                        <label for="adjective2">Adjective:</label>
+                        <input type="text" id="adjective2" placeholder="ex. majestic" required>
+                        <label for="place">Place of Living:</label>
+                        <input type="text" id="place" placeholder="ex. mansion" required>
+                        <label for="funnoun2">Fun Noun:</label>
+                        <input type="text" id="funnoun2" placeholder="ex. glitter" required>
+                        <label for="noun1">Noun:</label>
+                        <input type="text" id="noun1" placeholder="ex. cat" required>
+                    </div>
+                    <div>
+                        <label for="noun2">Noun:</label>
+                        <input type="text" id="noun2" placeholder="ex. cat" required>
+                        <label for="adjective3">Adjective:</label>
+                        <input type="text" id="adjective3" placeholder="ex. majestic" required>
+                        <label for="music">Music Genre:</label>
+                        <input type="text" id="music" placeholder="ex. pop" required>
+                        <label for="noun3">Noun:</label>
+                        <input type="text" id="noun3" placeholder="ex. cat" required>
+                        <label for="verb">Verb:</label>
+                        <input type="text" id="verb" placeholder="ex. dance" required>
+                    </div>
+                </div>
+
+                <!-- submit button -->
+                 <div id="submit-button">
+                    <input type="submit" value="Start the celebration!" id="submit">
+                </div>
+            </form>
+
+        </section>
+
+        <section id="madlibs-overlay" class="hidden">
+            <div id="photo1"></div>
+            <div id="photo2"></div>
+            <article id="madlibs-story">
+                <p>Today's the day! The long awaited day to celebrate WORD! You put on your favorite WORD WORD and rush out of your room to the kitchen. You decided that you will be making WORD for this WORD occasion. You add all of the basic ingredients, but decide to spice things up by adding lots of WORD. You think it will make it taste very WORD. With the food all done, you start to decorare your WORD with WORD-shaped banners and WORD. You set out some WORD-scented candles and put on WORD WORD music.</p>
+                <p>Ding-dong! That must be your friends! A group of WORD rush into your home ready to WORD! Let the celebration begin!</p>
+                <button id="redo">Have another celebration!</button>
+            </article>
+        </section>
+
+
+    </main>
+    
+</body>
+</html>
