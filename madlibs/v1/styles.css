@@ -88,9 +88,10 @@ form{
 
 form h2 {
     text-align: center;
+    margin-top: 5px;
     margin-bottom: 30px;
     color: #586c18;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #madlibs-questions{
@@ -113,7 +114,7 @@ form h2 {
 
 #submit, #redo{
     width: fit-content;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 5px;
     padding: 15px;
     background-color: #EBE592;
@@ -143,7 +144,7 @@ form h2 {
 
 .showing{
     opacity: 1;
-    visibility:visible;
+    visibility: visible;
 }
 
 #madlibs-overlay{
@@ -211,4 +212,9 @@ form h2 {
 #madlibs-story p{
     line-height: 1.5em;
     color:#835700;
+}
+
+.bolded{
+    font-weight: 700;
+    color: #CF3A3A;
 }
