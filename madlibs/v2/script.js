@@ -38,7 +38,7 @@
             error.innerHTML= myText;
         }
         else if(clothing == ""){
-            myText= "Please provide a clothing item";
+            myText= "Please provide a clothing item!";
             document.querySelector('#clothing').focus();
             error.innerHTML= myText;
         }
@@ -134,8 +134,5 @@
             overlay.className = 'hidden';
         }
     });
-
-
-
 
 })();

@@ -75,7 +75,7 @@ main{
 
 form{
     max-width: 620px;
-    max-height: 525px;
+    max-height: 550px;
     background-color: #FFF2DF;
     padding: 50px;
 
@@ -130,43 +130,34 @@ form h2 {
     z-index: 1;
 }
 
-#envelope img{
+#envelopeimg{
     margin-top: 50px;
-    width: 100%;
+    max-width: 100%;
     transform: rotate(-30deg);
 }
 
 #error-message{
-    position: absolute;
-    z-index: 2;
     color: #CF3A3A;
-    transform: rotate(-30deg);
-    left: 68px;
-    top: 220px;
+    text-align:center;
 }
 
 #stamp1{
     position: absolute;
+    width:35%;
     z-index: 4;
-    left: 25%;
-    top: 54%;
-}
-
-#stamp1 img{
-    width: 12%;
-    transform: rotate(20deg);
+    transform: rotate(-27deg);
+    left: 10%;
+    bottom: 8%;
 }
 
 #stamp2{
     position: absolute;
+    width:35%;
     z-index: 4;
-    left: 10%;
-    top: 70%;
-}
+    transform: rotate(25deg);
+    left: 70%;
+    bottom: 20%;
 
-#stamp2 img{
-    width:10%;
-    transform: rotate(-30deg);
 }
 
 /* overlay styling */
@@ -219,27 +210,17 @@ form h2 {
 #photo1{
     position: absolute;
     z-index: 7;
-    left: 6%;
-    top: 45%;
-    width: 19%;
-    height:40vh;
-    background-color: #ffd788;
-    transform: rotate(-25deg);
-
-    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.2);
+    left: 1%;
+    top: 35%;
+    width: 30%;
 }
 
 #photo2{
     position: absolute;
     z-index: 7;
-    left: 75%;
-    top: 45%;
-    width: 19%;
-    height:40vh;
-    background-color: #ffd788;
-    transform: rotate(25deg);
-
-    box-shadow: 0px 3px 5px rgb(0, 0, 0, 0.2);
+    left: 69%;
+    top: 35%;
+    width: 30%;
 }
 
 #madlibs-story p{
