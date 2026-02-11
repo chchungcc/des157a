@@ -49,6 +49,14 @@ main article p, main article a, footer p {
     color: #895c44;
 }
 
+figcaption {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #b37700;
+    font-size: 12px;
+}
+
 main article time {
     font-family: "Comfortaa", sans-serif;
     font-weight: 700;
