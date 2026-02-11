@@ -186,7 +186,7 @@ form h2 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 34%;
     height: 50vh;
     padding: 40px;
     background-color: #FFF2DF;
@@ -210,7 +210,7 @@ form h2 {
 #photo1{
     position: absolute;
     z-index: 7;
-    left: 1%;
+    left: 7%;
     top: 35%;
     width: 30%;
 }
@@ -218,13 +218,13 @@ form h2 {
 #photo2{
     position: absolute;
     z-index: 7;
-    left: 69%;
+    left: 63%;
     top: 35%;
     width: 30%;
 }
 
 #madlibs-story p{
-    line-height: 1.5em;
+    line-height: 1.8em;
     color:#835700;
 }
 
