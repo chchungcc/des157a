@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Every Picture Experiment</title>
 
+    <!-- normalization -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
     <!-- style sheet -->
     <link href="styles.css" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="script.js" defer></script> 
     
 </head>
 <body>
-    <div id="pink1"><img src="images/color-swatch.png" alt="pink"></div>
+    <div class="backgroundone"></div>
     
+    <div id="pink1">
+            <div class="back"></div>
+            <div class="front"><img src="images/color-swatch.png" alt="pink" width="180"></div>
+        </div>
+
+        <div id="pink2">
+            <img src="images/color-swatch.png" alt="pink" width="180" class="background">
+            <img src="images/pinkflower.jpg" alt="pink flower" width="180" height="180" class="overlay">
+            <div class="color"></div>
+        </div>
 </body>
 </html>

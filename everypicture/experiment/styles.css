@@ -9,14 +9,72 @@ div{
     display: inline-block;
 }
 
-#pink1{
-    position: relative;
-    top: 10vh;
-    left: 5%;
+/* experiment 1 */
+#pink1 {
+    position: absolute;
+    perspective: 1000px;
 }
 
-#pink1 img{
-    max-width: 200px;
-    height: auto;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+#pink1:hover .back {
+    transform: rotateY(0deg);
+    transition: transform 3s;
+}
+
+#pink1:hover .front {
+    transform: rotateY(-180deg);
+    transition: transform 3s;
+}
+
+.back, .front {
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+	backface-visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 180px;
+    height: 250px;
+    transition: all 1s;
+}
+
+.back { 
+    background-image: url(images/pinkflower.jpg);
+    transform: rotateY(180deg);
+}
+
+.front {	
+    transform: rotateY(0deg);
+}
+
+/* experiment 2 */
+#pink2{
+    position: relative;
+    left: 400px;
+    top: 100px;
+}
+
+#pink2 .background {
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+}
+
+#pink2 .background, #pink2 .overlay{
+    position: absolute;
+}
+
+#pink2 .color{
+    background-color: #FFB0B0;
+    position:absolute;
+    width: 180px;
+    height: 180px;
+    transition: height 1.5s ease-in-out;
+}
+
+.backgroundone{
+    position: absolute;
+    background-image: url(images/pinkflower.jpg);
+    width: 100vmax;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
 }
