@@ -40,7 +40,7 @@ p{
 
 .definition{
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
@@ -57,29 +57,54 @@ p{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    display: flex;
-    /* width: 100vmax;
-    height: 100vh; */
-    gap: 50px;
+    width: 100vmax;
+    height: 100vh;
 }
 
 #purple, #pink, #orange, #blue, #green{
+    position: absolute;
     box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
 }
 
-.overlayers{
-    position: absolute;
-    top: 45.4%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    display: flex;
-    gap: 70px;
+.overlay{
+    width: 120px;
+    height: 120px;
 }
 
-.overlayers .overlay{
-    /* position: absolute; */
-    width: 160px;
-    height: 160px;
+.purplecard{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+.pinkcard{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+}
+
+.orangecard{
+    position: absolute;
+    top: 67%;
+    left: 68%;
+}
+
+.bluecard{
+    position: absolute;
+    top: 30%;
+    left: 83%; 
+}
+
+.greencard{
+    position: absolute;
+    top: 7%;
+    left: 60%;
+}
+
+#purpleover, #pinkover, #orangeover, #blueover, #greenover{
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
 }
 
 #purpleover{

@@ -63,7 +63,7 @@ p{
     gap: 50px;
 }
 
-#purple, #pink, #orange, #blue, #green{
+.purple, .pink, .orange, .blue, .green{
     box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
 }
 
@@ -100,4 +100,25 @@ p{
 
 #pinkover{
     background-color: #FF84F5;
+}
+
+
+#purple{
+    box-shadow: 0 0 20px #9D80FF;
+}
+
+#blue{
+    box-shadow: 0 0 20px #5086E5;
+}
+
+#green{
+    box-shadow: 0 0 20px #CAFF58;
+}
+
+#orange{
+    box-shadow: 0 0 20px #FF9564;
+}
+
+#pink{
+    box-shadow: 0 0 20px #FF84F5;
 }
