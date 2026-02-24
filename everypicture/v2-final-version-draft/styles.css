@@ -27,6 +27,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 1s ease-in;
 }
 
 .definition h1{
@@ -38,18 +39,21 @@ p{
     letter-spacing: 0.1em;
 }
 
+.imageshow{
+    width: 100px;
+    height: 300px;
+}
+
 .definition{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    max-width: 1000px;
+    padding: 30px;
+    max-width: 1200px;
     
     color: rgb(245, 255, 255);
 
-    /* background-color: rgba(19, 19, 19, 0.7);
-    border-radius: 10px; */
 }
 
 .colorcards{
@@ -69,12 +73,21 @@ p{
 .overlay{
     width: 120px;
     height: 120px;
+    transition: height 1.5s ease-in-out;
 }
+
+.purplecard, .pinkcard, .orangecard, .greencard, .bluecard {width:135px; height:188px;}
+
+.purplecard:hover{box-shadow: 0 0 20px 3px #9D80FF;}
+.pinkcard:hover{box-shadow: 0 0 20px 3px #FF84F5;}
+.orangecard:hover{box-shadow: 0 0 20px 3px #FF9564;}
+.greencard:hover{box-shadow: 0 0 20px 3px #CAFF58;}
+.bluecard:hover{box-shadow: 0 0 20px 3px #5086E5;}
 
 .purplecard{
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 8%;
+    left: 12%;
 }
 
 .pinkcard{
@@ -85,8 +98,8 @@ p{
 
 .orangecard{
     position: absolute;
-    top: 67%;
-    left: 68%;
+    top: 70%;
+    left: 72%;
 }
 
 .bluecard{
@@ -97,7 +110,7 @@ p{
 
 .greencard{
     position: absolute;
-    top: 7%;
+    top: 5%;
     left: 60%;
 }
 
@@ -126,3 +139,30 @@ p{
 #pinkover{
     background-color: #FF84F5;
 }
+
+.image0{
+    transition: background-image 1s ease-in;
+    background-image: url(images/pigeon-hearing.jpg);
+}
+
+.image1{
+    transition: background-image 1s ease-in;
+    background-image: url(images/jellyfish-touch.jpg);
+}
+
+.image2{
+    transition: background-image 1s ease-in;
+    background-image: url(images/sky-smell.jpg);
+}
+
+.image3{
+    transition: background-image 1s ease-in;
+    background-image: url(images/ocean-taste.jpg);
+}
+
+.image4{
+    transition: background-image 1s ease-in;
+    background-image: url(images/moon-sight.jpg);
+}
+
+
