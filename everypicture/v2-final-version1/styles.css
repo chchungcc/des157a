@@ -1,0 +1,124 @@
+/* resets */
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */
+h1{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* main */
+.mainbackground{
+    position: absolute;
+    background-image: url(images/graybackground.png);
+    width: 100vmax;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.definition h1{
+    margin-bottom: 10px;
+}
+
+.definition p{
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.definition{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 1000px;
+    
+    color: rgb(245, 255, 255);
+
+    /* background-color: rgba(19, 19, 19, 0.7);
+    border-radius: 10px; */
+}
+
+.colorcards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    /* width: 100vmax;
+    height: 100vh; */
+    gap: 50px;
+}
+
+.purple, .pink, .orange, .blue, .green{
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
+}
+
+.overlayers{
+    position: absolute;
+    top: 45.4%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    gap: 70px;
+}
+
+.overlayers .overlay{
+    /* position: absolute; */
+    width: 160px;
+    height: 160px;
+}
+
+#purpleover{
+    background-color: #9D80FF;
+}
+
+#blueover{
+    background-color: #5086E5;
+}
+
+#greenover{
+    background-color: #CAFF58;
+}
+
+#orangeover{
+    background-color: #FF9564;
+}
+
+#pinkover{
+    background-color: #FF84F5;
+}
+
+
+#purple{
+    box-shadow: 0 0 20px #9D80FF;
+}
+
+#blue{
+    box-shadow: 0 0 20px #5086E5;
+}
+
+#green{
+    box-shadow: 0 0 20px #CAFF58;
+}
+
+#orange{
+    box-shadow: 0 0 20px #FF9564;
+}
+
+#pink{
+    box-shadow: 0 0 20px #FF84F5;
+}

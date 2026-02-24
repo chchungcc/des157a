@@ -13,9 +13,19 @@ h1{
 
 p{
     font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.words p{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+    font-size: 40px;
+    background-color: #FFFEFA;
+    padding: 0px 2px;
+    box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
 }
 
 /* main */
@@ -27,6 +37,7 @@ p{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 1s ease-in;
 }
 
 .definition h1{
@@ -38,18 +49,21 @@ p{
     letter-spacing: 0.1em;
 }
 
+.imageshow{
+    width: 100px;
+    height: 300px;
+}
+
 .definition{
     position: absolute;
-    top: 15%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
-    max-width: 1000px;
+    padding: 30px;
+    max-width: 1200px;
     
     color: rgb(245, 255, 255);
 
-    /* background-color: rgba(19, 19, 19, 0.7);
-    border-radius: 10px; */
 }
 
 .colorcards{
@@ -57,29 +71,63 @@ p{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    display: flex;
-    /* width: 100vmax;
-    height: 100vh; */
-    gap: 50px;
+    width: 100vmax;
+    height: 100vh;
 }
 
-.purple, .pink, .orange, .blue, .green{
+#purple, #pink, #orange, #blue, #green{
+    position: absolute;
     box-shadow: 5px 5px 5px rgb(0,0,0,0.5);
 }
 
-.overlayers{
-    position: absolute;
-    top: 45.4%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    display: flex;
-    gap: 70px;
+.overlay{
+    width: 120px;
+    height: 120px;
+    transition: height 1.5s ease-in-out;
 }
 
-.overlayers .overlay{
-    /* position: absolute; */
-    width: 160px;
-    height: 160px;
+.purplecard, .pinkcard, .orangecard, .greencard, .bluecard {width:135px; height:188px;}
+
+.purplecard:hover{box-shadow: 0 0 20px 3px #9D80FF;}
+.pinkcard:hover{box-shadow: 0 0 20px 3px #FF84F5;}
+.orangecard:hover{box-shadow: 0 0 20px 3px #FF9564;}
+.greencard:hover{box-shadow: 0 0 20px 3px #CAFF58;}
+.bluecard:hover{box-shadow: 0 0 20px 3px #5086E5;}
+
+.purplecard{
+    position: absolute;
+    top: 8%;
+    left: 12%;
+}
+
+.pinkcard{
+    position: absolute;
+    top: 50%;
+    left: 6%;
+}
+
+.orangecard{
+    position: absolute;
+    top: 70%;
+    left: 72%;
+}
+
+.bluecard{
+    position: absolute;
+    top: 30%;
+    left: 83%; 
+}
+
+.greencard{
+    position: absolute;
+    top: 5%;
+    left: 60%;
+}
+
+#purpleover, #pinkover, #orangeover, #blueover, #greenover{
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
 }
 
 #purpleover{
@@ -102,23 +150,59 @@ p{
     background-color: #FF84F5;
 }
 
-
-#purple{
-    box-shadow: 0 0 20px #9D80FF;
+.image0{
+    transition: background-image 1s ease-in;
+    background-image: url(images/pigeon-hearing.jpg);
 }
 
-#blue{
-    box-shadow: 0 0 20px #5086E5;
+.image1{
+    transition: background-image 1s ease-in;
+    background-image: url(images/jellyfish-touch.jpg);
 }
 
-#green{
-    box-shadow: 0 0 20px #CAFF58;
+.image2{
+    transition: background-image 1s ease-in;
+    background-image: url(images/sky-smell.jpg);
 }
 
-#orange{
-    box-shadow: 0 0 20px #FF9564;
+.image3{
+    transition: background-image 1s ease-in;
+    background-image: url(images/ocean-taste.jpg);
 }
 
-#pink{
-    box-shadow: 0 0 20px #FF84F5;
+.image4{
+    transition: background-image 1s ease-in;
+    background-image: url(images/moon-sight.jpg);
 }
+
+#sound1, #sound2, #sound3{
+    position: absolute;
+}
+
+#sound1{
+    transform: rotate(-20deg);
+    left: 30%;
+    /* top: 23%; */
+    top: -100%;
+    transition: top 1s ease-in-out;
+}
+
+#sound2{
+    transform: rotate(10deg);
+    left: 50%;
+    /* top: 36%; */
+    top: -100%;
+    transition: top 1s ease-in-out;
+}
+
+#sound3{
+    transform: rotate(-12deg);
+    left: 40%;
+    /* top: 80%; */
+    top: -100%;
+    transition: top 1s ease-in-out;
+}
+
+
+
+
