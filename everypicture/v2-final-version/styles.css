@@ -29,10 +29,6 @@ p{
 }
 
 /* main */
-body{
-    overflow: hidden;
-}
-
 .mainbackground{
     position: absolute;
     background-image: url(images/graybackground.png);

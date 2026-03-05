@@ -1,0 +1,121 @@
+/* resets */
+h1, h2, p, button{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    all: unset;
+}
+
+/* fonts */
+h1, h2, p, button{
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#fffbfc;
+}
+
+/* set ups */
+body{
+    background-color: #282828;
+    margin: 30px;
+}
+
+/* header */
+h1{font-size: 56px; letter-spacing: 10px;}
+button{font-size: 20px;}
+
+header{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1{
+    margin: auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    display: flex;
+    gap: 30px;
+}
+
+/* game */
+.game{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.player1, .player2{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.player1 p, .player2 p{font-size:24px;}
+
+.player1 .circle, .player2 .circle{
+    display: inline-block;
+    padding: 20px 18px;
+    border-radius: 100%;
+    background-color: #0d0d0d;
+    border: solid 1px #fffbfc;
+
+    text-align: center;
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.name{
+    margin-bottom: 10px;
+}
+
+.jar {
+    text-align: center;
+}
+
+.jar p{
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+#pass{
+    margin-top: 30px;
+    padding: 10px 30px;
+
+    background-color: #0d0d0d;
+    border: solid 1px #fffbfc;
+    border-radius: 50px;
+}
+
+/* rules overlay */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(60, 60, 60, 0.7);
+}
+
+.rules{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50vh;
+    padding: 40px;
+    background-color: #0d0d0d;
+    border: solid 1px #fffbfc;
+    border-radius: 30px;
+}

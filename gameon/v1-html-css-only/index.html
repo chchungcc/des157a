@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On V1</title>
+
+    <!-- normalization -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Sono:MONO@1&display=swap" rel="stylesheet">
+
+    <!-- style sheet -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>STARFALL</h1>
+        <div class="menu">
+            <div class="left">
+                <button>restart game</button>
+            </div>
+            <div class="right">
+                <button>rules</button>
+                <button>sound on</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="game">
+        <div class="player1">
+            <p class="circle">10</p>
+            <p class="name">player 1</p>
+            <p>star score</p>
+        </div>
+        <div class="jar">
+            <img src="images/jar.png" alt="jar" width="280">
+            <p>click the jar to shake</p>
+            <button id="pass">pass turn</button>
+        </div>
+        <div class="player2">
+            <p class="circle">10</p>
+            <p class="name">player 2</p>
+            <p>star score</p>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="rules">
+            <h2>rules</h2>
+        </div>
+    </div>
+
+</body>
+</html>
