@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On V1</title>
+
+    <!-- normalization -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Sono:MONO@1&display=swap" rel="stylesheet">
+
+    <!-- style sheet -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>STARFALL</h1>
+        <div class="menu">
+            <div class="left">
+                <button id="rulesbutton">rules</button>
+                <button id="restartbutton"></button>
+            </div>
+            <div class="right">
+                <button>sound on</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="game">
+        <div class="player1">
+            <div class="dicerolls">
+                <img src="images/stardie1.png" alt="dice 1" width="100">
+                <img src="images/stardie1.png" alt="dice 1" width="100">
+            </div>
+            <div class="circle">
+                <p>0</p>
+            </div>
+            <p class="name">player 1</p>
+            <p>star score</p>
+        </div>
+        <div class="jar">
+            <img src="images/jar.png" alt="jar" width="280">
+            <p id="shake">hello</p>
+            <button id="begingame">begin game</button>
+        </div>
+        <div class="player2">
+            <div class="dicerolls">
+                <img src="images/stardie1.png" alt="dice 1" width="100">
+                <img src="images/stardie1.png" alt="dice 1" width="100">
+            </div>
+            <div class="circle">
+                <p>0</p>
+            </div>
+            <p class="name">player 2</p>
+            <p>star score</p>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="rules">
+            <div class="howtoplay">
+                <h2>rules</h2>
+                <p>players will shake the jar to get more stars for their star score. the star dice above each player represents their two rolls from shaking the jar.</p>
+                <div id="win">
+                    <img src="images/pixelstar.png" alt="star" width="20">
+                    <p>&nbsp;first one to get a star score of 30 is the winner!&nbsp;</p>
+                    <img src="images/pixelstar.png" alt="star" width="20">
+                </div>
+            </div>
+            <div class="dicerules">
+                <div>
+                    <p>if one of the rolls is a one, the turn switches to the next player</p>
+                    <img src="images/stardie1.png" alt="dice 1" width="80">
+                    <img src="images/stardie6.png" alt="dice 6" width="80">
+                </div>
+                <div>
+                    <p>beware! getting snake eyes (two ones) will reset your star score</p>
+                    <img src="images/stardie1.png" alt="dice 1" width="80">
+                    <img src="images/stardie1.png" alt="dice 1" width="80">
+                </div>
+            </div>
+            <button class="play">play</button>
+        </div>
+    </div>
+
+</body>
+</html>
