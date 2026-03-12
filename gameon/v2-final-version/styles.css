@@ -84,6 +84,14 @@ h1{
     margin-bottom: 10px;
 }
 
+.p1stars img {
+    filter: drop-shadow(0 0 5px #fffbfc);
+}
+
+.p2stars img {
+    filter: drop-shadow(0 0 5px #fffbfc);
+}
+
 .jar {
     text-align: center;
 }
@@ -111,8 +119,6 @@ h1{
   90%{transform: rotate(-10deg)}
   100%{transform: rotate(0deg)}
 }
-
-
 
 #pass, #begingame, #rollagain, #roll{
     margin-top: 30px;
@@ -202,3 +208,4 @@ h1{
 
     box-shadow: 0 0 10px 3px #fffbfc;
 }
+

@@ -21,6 +21,9 @@
     const jarsound = new Audio('sounds/jarshake.mp3');
     // const jarsound= new Audio('sounds/ding1.mp3');
 
+    const p1stars = document.querySelector('.p1stars');
+    const p2stars = document.querySelector('.p2stars');
+
     const gameData = {
         dice: ['stardie1.png', 'stardie2.png', 'stardie3.png', 'stardie4.png', 'stardie5.png', 'stardie6.png'],
         players: ['player 1', 'player 2'],
@@ -114,6 +117,8 @@
 
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
+
+
         if(gameData.rollSum === 2){
             console.log('snake eyes');
 
@@ -136,6 +141,32 @@
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             document.querySelector("#buttonsarea").innerHTML = '<button id="rollagain">Shake again</button> <p style="display: inline;">&nbsp;&nbsp;or&nbsp;&nbsp;</p> <button id="pass">Pass</button>';
 
+            // if(gameData.players[gameData.index] === 'player 1' && gameData.score[gameData.index] >= 3){
+            //     for(let i = 0; i < 3; i++){
+            //         let randomleft;
+            //         let randomtop;
+            //         randomleft = Math.floor(Math.random() * 500)+100; 
+            //         console.log(randomleft);
+            //         randomtop = Math.floor(Math.random() * 500)+100; 
+            //         p1stars.innerHTML += `<img src="images/pixelstar.png" alt="star${i}" id="p1star${i}" width="30">`;
+            //         document.querySelector(`#p1star${i}`).style.position = 'absolute';
+            //         document.querySelector(`#p1star${i}`).style.left = randomleft;
+            //         document.querySelector(`#p1star${i}`).style.top = randomtop;
+            //     }
+            //     p1stars.innerHTML = `<img src="images/pixelstar.png" alt="star1" id="p1star1" width="30">`;
+            //     document.querySelector('#p1star1').style.position = 'absolute';
+            //     document.querySelector('#p1star1').style.left = '100px';
+            //     document.querySelector('#p1star1').style.top = '100px';
+            // }
+
+            // if(gameData.players[gameData.index] === 'player 2' && gameData.score[gameData.index] >= 3){
+            //     p2stars.innerHTML = `<img src="images/pixelstar.png" alt="star1" id="p2star1" width="30">`;
+
+            //     document.querySelector('#p2star1').style.position = 'absolute';
+            //     document.querySelector('#p2star1').style.left = '900px';
+            //     document.querySelector('#p2star1').style.top = '100px';
+            // }
+
             //add roll again button 
             document.querySelector('#rollagain').addEventListener('click', function(){
                 throwDice();
@@ -156,7 +187,6 @@
             shake.innerHTML = `<p>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} stars!</p>`;
 
             document.querySelector("#buttonsarea").innerHTML = '';
-            // document.querySelector('#quit').innerHTML = 'Start a New Game?';
         } else{
             //show current score
             showCurrentScore();
@@ -171,7 +201,6 @@
         else{
             document.querySelector('#p2score').innerHTML= `<p id="p2score">${gameData.score[1]}</p>`;
         }
-        // score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:${gameData.score[0]}</strong> and <strong>${gameData.players[1]}:${gameData.score[1]}</strong></p>`;
     }
 
 })();
