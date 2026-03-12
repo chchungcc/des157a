@@ -42,7 +42,7 @@ h1{
 
 .left{
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 /* game */
@@ -51,8 +51,8 @@ h1{
     justify-content: space-between;
     margin-top: 60px;
 
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .player1, .player2{
@@ -89,11 +89,32 @@ h1{
 }
 
 .jar p{
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 24px;
 }
 
-#pass, #begingame{
+.jar img{
+    filter: drop-shadow(0 0 10px #fffbfc);
+}
+
+.shaking{
+    animation: shake 2s linear 1;
+}
+
+@keyframes shake {
+  0% {transform: rotate(0deg);}
+  20% {transform: rotate(10deg); }
+  40% {transform: rotate(-10deg); }
+  60%{transform: rotate(10deg)}
+  70%{transform: rotate(-10deg)}
+  80%{transform: rotate(10deg)}
+  90%{transform: rotate(-10deg)}
+  100%{transform: rotate(0deg)}
+}
+
+
+
+#pass, #begingame, #rollagain, #roll{
     margin-top: 30px;
     padding: 10px 30px;
 
@@ -139,6 +160,8 @@ h1{
     display: flex;
     gap: 50px;
 }
+
+.dicerules div{flex:1;}
 
 .dicerules img{
     margin: 10px;

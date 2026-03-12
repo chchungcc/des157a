@@ -29,13 +29,14 @@
                 <button id="restartbutton"></button>
             </div>
             <div class="right">
-                <button>sound on</button>
+                <button id="sound">sound off</button>
             </div>
         </div>
     </header>
 
     <div class="game">
         <div class="player1">
+            <div class="p1stars-v0"></div>
             <div class="dicerolls" id="player1dice">
                 <img src="images/stardie1.png" alt="dice 1" width="100">
                 <img src="images/stardie1.png" alt="dice 1" width="100">
@@ -47,11 +48,13 @@
             <p>star score</p>
         </div>
         <div class="jar">
-            <img src="images/jar.png" alt="jar" width="280" id="roll">
+            <img src="images/jar.png" alt="jar" width="250" id="jarshake">
             <p id="shake"></p>
             <button id="begingame">begin game</button>
+            <div id="buttonsarea"></div>
         </div>
         <div class="player2">
+            <div class="p2stars-v0"></div>
             <div class="dicerolls" id="player2dice">
                 <img src="images/stardie1.png" alt="dice 1" width="100">
                 <img src="images/stardie1.png" alt="dice 1" width="100">
@@ -77,7 +80,7 @@
             </div>
             <div class="dicerules">
                 <div>
-                    <p>if one of the rolls is a one, the turn switches to the next player</p>
+                    <p>if you roll a one, you don't get stars and the turn switches to the next player</p>
                     <img src="images/stardie1.png" alt="dice 1" width="80">
                     <img src="images/stardie6.png" alt="dice 6" width="80">
                 </div>

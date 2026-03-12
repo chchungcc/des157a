@@ -5,20 +5,21 @@
     const start = document.querySelector('#begingame');
     const play = document.querySelector('.play');
     const overlay = document.querySelector('.overlay');
-    // const gameControl = document.querySelector('#gamecontrol');
 
     const restart = document.querySelector('#restartbutton');
     const rules = document.querySelector('#rulesbutton');
+    const sound= document.querySelector('#sound');
+    let soundonoff = 1;
 
-    const jars = document.querySelector('.jar');
-    // const shake = document.querySelector('#shake');
-
-    // const game = document.querySelector('#game');
-    // const score = document.querySelector('#score');
-    // const actionArea = document.querySelector('#actions');
+    const shake = document.querySelector('#shake');
+    const jar = document.querySelector('#jarshake');
 
     const player1 = document.querySelector('#player1dice');
     const player2 = document.querySelector('#player2dice');
+
+    const music = new Audio('sounds/music.mp3');
+    const jarsound = new Audio('sounds/jarshake.mp3');
+    // const jarsound= new Audio('sounds/ding1.mp3');
 
     const gameData = {
         dice: ['stardie1.png', 'stardie2.png', 'stardie3.png', 'stardie4.png', 'stardie5.png', 'stardie6.png'],
@@ -39,13 +40,33 @@
         overlay.style.visibility = 'visible';
     });
 
+    sound.addEventListener('click', function(){
+        if (soundonoff == 1){
+            music.muted = true;
+            jarsound.muted = true;
+            sound.innerHTML = `<button id="sound">sound on</button>`;
+            soundonoff = 2;
+        }
+        else if(soundonoff = 2){
+            music.muted = false;
+            jarsound.muted = false;
+            sound.innerHTML = `<button id="sound">sound off</button>`;
+            soundonoff = 1;
+        }
+    });
+
+
     start.addEventListener('click', function(){
+        music.volume = 0.05;
+        music.play();
+
+        music.addEventListener('ended', function(){
+            music.currentTime = 0;
+            music.play();
+        });
+
         restart.innerHTML = 'restart game';
         start.remove();
-        jars.innerHTML += `<button id="pass">pass turn</button>`;
-        const shake = document.querySelector('#shake');
-        const roll = document.querySelector('#roll');
-        const pass = document.querySelector('#pass');
 
         document.querySelector('#restartbutton').addEventListener('click', function(){
             location.reload();
@@ -58,20 +79,31 @@
     });
 
     function setUpTurn(){
-        shake.innerHTML = 'click the jar for ' + gameData.players[gameData.index];
-        console.log('hi');
+        shake.innerHTML = 'shake for ' + gameData.players[gameData.index];
+        document.querySelector("#buttonsarea").innerHTML = '<button id="roll">Shake</button>';
 
-        roll.addEventListener('click', function(){
+        document.querySelector('#roll').addEventListener('click', function(){
             throwDice(); 
         });
     };
 
     function throwDice(){
         // actionArea.innerHTML = '';
+        jar.className = 'shaking';
+
+        jarsound.volume = 0.1;
+        jarsound.currentTime = 3;
+        jarsound.play();
+
+        jar.addEventListener('animationend', function(){
+            jar.removeAttribute('class');
+            jarsound.pause();
+        });
+
         gameData.roll1 = Math.floor(Math.random()*6)+1;
         gameData.roll2 = Math.floor(Math.random()*6)+1;
 
-        shake.innerHTML ='click the jar for ' + gameData.players[gameData.index];
+        shake.innerHTML ='shake for ' + gameData.players[gameData.index];
         
         if(gameData.players[gameData.index] === 'player 1'){
             player1.innerHTML = `<div class="dicerolls" id="player1dice"><img src="images/${gameData.dice[gameData.roll1-1]}" width="100"><img src="images/${gameData.dice[gameData.roll2-1]}" width="100"></div>`;
@@ -87,6 +119,7 @@
 
             gameData.index ? (gameData.index=0) : (gameData.index=1);
             shake.innerHTML = '<p>Boom! Snake eyes!</p>'
+            gameData.score[gameData.index] = 0;
             showCurrentScore();
             setTimeout(setUpTurn, 2000);
 
@@ -101,14 +134,14 @@
             console.log('no ones');
 
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            jars.innerHTML += '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
+            document.querySelector("#buttonsarea").innerHTML = '<button id="rollagain">Shake again</button> <p style="display: inline;">&nbsp;&nbsp;or&nbsp;&nbsp;</p> <button id="pass">Pass</button>';
 
             //add roll again button 
             document.querySelector('#rollagain').addEventListener('click', function(){
                 throwDice();
             });
 
-            pass.addEventListener('click', function(){
+            document.querySelector('#pass').addEventListener('click', function(){
                 gameData.index ? (gameData.index=0) : (gameData.index=1);
                 setUpTurn();
             });
@@ -119,10 +152,11 @@
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd){
-            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            showCurrentScore();
+            shake.innerHTML = `<p>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} stars!</p>`;
 
-            actionArea.innerHTML = '';
-            document.querySelector('#quit').innerHTML = 'Start a New Game?';
+            document.querySelector("#buttonsarea").innerHTML = '';
+            // document.querySelector('#quit').innerHTML = 'Start a New Game?';
         } else{
             //show current score
             showCurrentScore();
@@ -130,7 +164,14 @@
     }
 
     function showCurrentScore(){
-        score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:${gameData.score[0]}</strong> and <strong>${gameData.players[1]}:${gameData.score[1]}</strong></p>`;
+
+        if(gameData.players[gameData.index] === 'player 1'){
+            document.querySelector('#p1score').innerHTML= `<p id="p1score">${gameData.score[0]}</p>`;
+        }
+        else{
+            document.querySelector('#p2score').innerHTML= `<p id="p2score">${gameData.score[1]}</p>`;
+        }
+        // score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:${gameData.score[0]}</strong> and <strong>${gameData.players[1]}:${gameData.score[1]}</strong></p>`;
     }
 
 })();
