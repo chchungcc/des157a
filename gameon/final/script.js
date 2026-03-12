@@ -17,6 +17,9 @@
     // const score = document.querySelector('#score');
     // const actionArea = document.querySelector('#actions');
 
+    const player1 = document.querySelector('#player1dice');
+    const player2 = document.querySelector('#player2dice');
+
     const gameData = {
         dice: ['stardie1.png', 'stardie2.png', 'stardie3.png', 'stardie4.png', 'stardie5.png', 'stardie6.png'],
         players: ['player 1', 'player 2'],
@@ -40,16 +43,16 @@
         restart.innerHTML = 'restart game';
         start.remove();
         jars.innerHTML += `<button id="pass">pass turn</button>`;
+        const shake = document.querySelector('#shake');
+        const roll = document.querySelector('#roll');
+        const pass = document.querySelector('#pass');
 
         document.querySelector('#restartbutton').addEventListener('click', function(){
             location.reload();
         });
 
-
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
-
-        const shake = document.querySelector('#shake');
 
         setUpTurn();
     });
@@ -58,27 +61,32 @@
         shake.innerHTML = 'click the jar for ' + gameData.players[gameData.index];
         console.log('hi');
 
-        // actionArea.innerHTML = '<button id="roll">Roll the Dice</button>'
-
-        // document.querySelector('#roll').addEventListener('click', function(){
-        //     throwDice();
-        // });
+        roll.addEventListener('click', function(){
+            throwDice(); 
+        });
     };
 
     function throwDice(){
-        actionArea.innerHTML = '';
+        // actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random()*6)+1;
         gameData.roll2 = Math.floor(Math.random()*6)+1;
 
-        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}`;
-        game.innerHTML += `<img src="images/${gameData.dice[gameData.roll1-1]}"> <img src="images/${gameData.dice[gameData.roll2-1]}">`;
+        shake.innerHTML ='click the jar for ' + gameData.players[gameData.index];
+        
+        if(gameData.players[gameData.index] === 'player 1'){
+            player1.innerHTML = `<div class="dicerolls" id="player1dice"><img src="images/${gameData.dice[gameData.roll1-1]}" width="100"><img src="images/${gameData.dice[gameData.roll2-1]}" width="100"></div>`;
+        }
+        else{
+            player2.innerHTML = `<div class="dicerolls" id="player2dice"><img src="images/${gameData.dice[gameData.roll1-1]}" width="100"><img src="images/${gameData.dice[gameData.roll2-1]}" width="100"></div>`;
+        }
+
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         if(gameData.rollSum === 2){
             console.log('snake eyes');
 
             gameData.index ? (gameData.index=0) : (gameData.index=1);
-            game.innerHTML += '<p>Oh no! Snake eyes!</p>'
+            shake.innerHTML = '<p>Boom! Snake eyes!</p>'
             showCurrentScore();
             setTimeout(setUpTurn, 2000);
 
@@ -86,20 +94,21 @@
             console.log('one of them is a one');
 
             gameData.index ? (gameData.index=0) : (gameData.index=1);
-            game.innerHTML += `<p>You got a one! Switching to ${gameData.players[gameData.index]}</p>`;
+            shake.innerHTML = `<p>You got a one! ${gameData.players[gameData.index]}'s turn now!</p>`;
             setTimeout(setUpTurn, 2000);
 
         } else{
             console.log('no ones');
 
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
+            jars.innerHTML += '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
+            //add roll again button 
             document.querySelector('#rollagain').addEventListener('click', function(){
                 throwDice();
             });
 
-            document.querySelector('#pass').addEventListener('click', function(){
+            pass.addEventListener('click', function(){
                 gameData.index ? (gameData.index=0) : (gameData.index=1);
                 setUpTurn();
             });
