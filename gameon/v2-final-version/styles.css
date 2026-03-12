@@ -8,8 +8,12 @@ button{
     all: unset;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* fonts */
-h1, h2, p, button{
+h1, h2, p, button, a{
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -207,5 +211,11 @@ h1{
     border-radius: 50px;
 
     box-shadow: 0 0 10px 3px #fffbfc;
+}
+
+footer{
+    text-align: right;
+    position: relative;
+    top: 10vh;
 }
 
